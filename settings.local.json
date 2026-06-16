@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "_comment": "Drop this file at .claude/settings.local.json (gitignored). It allows safe read/test commands and requires approval for anything that mutates code, the database, or external services. Tune to your trust level.",
+
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(pwd)",
+      "Bash(echo:*)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git branch:*)",
+      "Bash(npm test:*)",
+      "Bash(npm run test:*)",
+      "Bash(pnpm test:*)",
+      "Bash(pnpm run test:*)",
+      "Bash(pytest:*)",
+      "Bash(jest:*)",
+      "Bash(go test:*)",
+      "Bash(cargo test:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)",
+      "Bash(git push --force:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(npm publish:*)",
+      "Bash(docker push:*)",
+      "Bash(terraform apply:*)",
+      "Bash(kubectl delete:*)",
+      "WebFetch(domain:internal.example.com)"
+    ]
+  },
+
+  "_comment_hooks": "Hooks are scripts that run on Claude Code lifecycle events. Below are useful starters; uncomment what fits your workflow.",
+  "hooks": {
+    "_PostToolUse_format_on_edit": {
+      "comment": "Auto-format files after Claude edits them (uncomment + adapt formatter)",
+      "matcher": "Edit|Write",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "prettier --write $FILE 2>/dev/null || true"
+        }
+      ]
+    },
+    "_Stop_run_tests": {
+      "comment": "Run tests when Claude stops (catches regressions before you do)",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "npm test --silent 2>&1 | tail -5"
+        }
+      ]
+    }
+  },
+
+  "env": {
+    "_NODE_ENV": "development",
+    "_DEBUG": "false"
+  }
+}

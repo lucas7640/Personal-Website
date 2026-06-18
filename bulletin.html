@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Bulletin Board — Lux is the Way</title>
+<meta name="description" content="A commons for travellers. Leave a thought, a reaction, a question." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="index.html"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#crest" /></svg> Lux is the Way</a>
+    <nav>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="art.html">Drawings</a></li>
+        <li><a href="essays.html">Essays</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="bulletin.html" class="is-active">Board</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-head page-head--caladan">
+  <div class="container">
+    <p class="eyebrow eyebrow--cool">The Commons</p>
+    <h1>The Bulletin Board</h1>
+    <p>A wall for travellers. Leave a thought, a reaction, a question — and react to the notes that move you.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="board-grid">
+
+      <!-- Left: the maker's standing note -->
+      <div class="board-intro reveal">
+        <h2>Leave a mark</h2>
+        <p>This board runs on GitHub Discussions, so every note is real and stays put. Sign in with GitHub to post or react — no account farming, no spam.</p>
+        <div class="board-note">
+          <p style="font-family:var(--serif);font-style:italic;color:var(--sand-200);font-size:19px;margin:0 0 8px;">"Stone by stone."</p>
+          <p style="margin:0;color:var(--muted);font-size:15px;">Welcome, traveller. I read every note. — Lucas</p>
+        </div>
+      </div>
+
+      <!-- Right: the live board (Giscus, backed by GitHub Discussions) -->
+      <div class="board-mount reveal">
+
+        <!-- ============================================================
+             SETUP — do this once, then delete this .board-fallback block:
+             1. Enable Discussions:  repo → Settings → General → Features → Discussions ✓
+             2. Install the Giscus app on the repo:  https://github.com/apps/giscus
+             3. Go to https://giscus.app, enter  lucas7640/Personal-Website,
+                pick category "Announcements" (or make one called "Bulletin"),
+                mapping = "pathname". It will hand you a repo-id and category-id.
+             4. Paste those two values into data-repo-id and data-category-id below.
+             ============================================================ -->
+        <div class="board-fallback" id="boardSetupNote">
+          <p><strong>The board isn't wired up yet.</strong> It runs on
+          <a href="https://giscus.app" target="_blank" rel="noopener" style="color:var(--gold);border-bottom:1px solid var(--gold-soft);">Giscus</a>
+          (free, backed by your repo's GitHub Discussions).</p>
+          <p style="margin-top:10px;">Enable Discussions on <code>lucas7640/Personal-Website</code>, install the
+          <a href="https://github.com/apps/giscus" target="_blank" rel="noopener" style="color:var(--gold);border-bottom:1px solid var(--gold-soft);">Giscus app</a>,
+          then visit giscus.app to get your <code>data-repo-id</code> and <code>data-category-id</code>,
+          paste them into the script below, and delete this note.</p>
+        </div>
+
+        <script src="https://giscus.app/client.js"
+                data-repo="lucas7640/Personal-Website"
+                data-repo-id="PASTE_REPO_ID_HERE"
+                data-category="Announcements"
+                data-category-id="PASTE_CATEGORY_ID_HERE"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="transparent_dark"
+                data-lang="en"
+                crossorigin="anonymous"
+                async>
+        </script>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div><div class="footer__brand">Lux is the Way</div><p class="footer__motto">Stone by stone.</p></div>
+    <ul class="footer__links">
+      <li><a href="art.html">Drawings</a></li><li><a href="essays.html">Essays</a></li>
+      <li><a href="videos.html">Videos</a></li><li><a href="bulletin.html">Board</a></li><li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="crest" viewBox="0 0 100 100">
+    <g fill="none" stroke="#c79a4b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M50 22 L50 70" />
+      <path d="M50 11 L54.5 23 L45.5 23 Z" fill="#c79a4b" stroke="none" />
+      <path d="M50 34 C34 30 22 34 10 30 C24 40 30 44 30 52 C38 47 44 47 50 50" />
+      <path d="M50 34 C66 30 78 34 90 30 C76 40 70 44 70 52 C62 47 56 47 50 50" />
+      <path d="M50 48 C40 50 32 54 24 52 C32 58 38 60 40 66 C44 62 48 62 50 64" />
+      <path d="M50 48 C60 50 68 54 76 52 C68 58 62 60 60 66 C56 62 52 62 50 64" />
+      <path d="M50 64 L44 80 M50 64 L50 82 M50 64 L56 80" />
+    </g>
+  </symbol>
+</svg>
+
+<script src="main.js" defer></script>
+</body>
+</html>

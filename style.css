@@ -225,7 +225,7 @@ h1, h2, h3, h4 { font-family: var(--serif); color: var(--sand-200); font-weight:
 /* ---------- About ---------- */
 .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
 .about-portrait { border: 1px solid var(--stone-600); }
-.about-body p { margin-bottom: 22px; font-size: 18px; color: var(--sand-300); }
+.about-body p { margin-bottom: 24px; font-family: var(--serif); font-size: 24px; line-height: 1.45; color: var(--sand-200); }
 .about-body .lead { margin-bottom: 30px; }
 .social { display: flex; gap: 14px; margin-top: 30px; flex-wrap: wrap; }
 .social a { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--stone-600); padding: 11px 18px; transition: 0.3s var(--ease); }
@@ -280,3 +280,11 @@ h1, h2, h3, h4 { font-family: var(--serif); color: var(--sand-200); font-weight:
   .gallery { columns: 1; }
   .container { padding: 0 20px; }
 }
+
+/* ---------- Upcoming video ideas ---------- */
+.ideas { list-style: none; max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; }
+.idea { display: flex; flex-direction: column; gap: 6px; padding: 24px 0 24px 28px; border-bottom: 1px solid var(--stone-600); position: relative; transition: padding-left 0.3s var(--ease); }
+.idea:hover { padding-left: 38px; }
+.idea::before { content: ""; position: absolute; left: 2px; top: 31px; width: 9px; height: 9px; border: 1px solid var(--gold); transform: rotate(45deg); }
+.idea__title { font-family: var(--serif); font-size: 26px; color: var(--sand-100); line-height: 1.15; }
+.idea__note { color: var(--muted); font-size: 16px; }

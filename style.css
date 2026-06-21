@@ -288,3 +288,7 @@ h1, h2, h3, h4 { font-family: var(--serif); color: var(--sand-200); font-weight:
 .idea::before { content: ""; position: absolute; left: 2px; top: 31px; width: 9px; height: 9px; border: 1px solid var(--gold); transform: rotate(45deg); }
 .idea__title { font-family: var(--serif); font-size: 26px; color: var(--sand-100); line-height: 1.15; }
 .idea__note { color: var(--muted); font-size: 16px; }
+
+/* ---------- Full-width photo banner (spans all gallery columns) ---------- */
+.gallery__item--wide { column-span: all; margin-bottom: 24px; }
+.gallery__item--wide img { width: 100%; max-height: 70vh; object-fit: cover; }

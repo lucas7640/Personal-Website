@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duncan's New Abilities and Dune Mentats - Lux is the Way</title>
+<meta name="description" content="A script by Lucas Edward on Duncan Idaho's awakening as a Mentat, the way of questions, and what Dune teaches about how we change minds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--stone-900:#14110d;--stone-800:#1d1813;--stone-700:#2a231b;--stone-600:#3a3025;--sand-300:#d8c7a6;--sand-200:#e7dcc4;--sand-100:#f3ecdc;--muted:#9c8c72;--gold:#c79a4b;--gold-soft:#a8823c;--green:#4f6354;--serif:"Cormorant Garamond","Times New Roman",serif;--sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--maxw:1180px;--ease:cubic-bezier(0.22,1,0.36,1)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--sans);background-color:var(--stone-800);color:var(--sand-300);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased;background-image:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(199,154,75,0.10),transparent 60%),radial-gradient(ellipse 70% 50% at 90% 110%,rgba(79,99,84,0.10),transparent 55%);background-attachment:fixed;min-height:100vh}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 28px}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--sand-200);font-weight:500;line-height:1.08;letter-spacing:0.01em}
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(20,17,13,0.72);border-bottom:1px solid var(--stone-600)}
+.nav__inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.nav__brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:22px;color:var(--sand-100);letter-spacing:0.06em}
+.nav__brand svg{width:26px;height:26px}
+.nav__links{display:flex;gap:34px;list-style:none}
+.nav__links a{font-size:13px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);position:relative;padding:6px 0;transition:color 0.3s var(--ease)}
+.nav__links a:hover,.nav__links a.is-active{color:var(--sand-100)}
+.nav__links a.is-active::after,.nav__links a:hover::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--gold)}
+.nav__toggle{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+.nav__toggle span{width:24px;height:1.5px;background:var(--sand-200);display:block;transition:0.3s var(--ease)}
+.article{max-width:720px;margin:0 auto;padding:clamp(64px,10vh,110px) 0}
+.article__meta{display:flex;gap:16px;align-items:center;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+.article h1{font-size:clamp(38px,6vw,70px);color:var(--sand-100);margin-bottom:30px}
+.article__body{font-size:19px;line-height:1.85;color:var(--sand-300)}
+.article__body p{margin-bottom:26px}
+.article__body h2{font-size:32px;margin:48px 0 18px}
+.article__body h3{font-size:23px;margin:32px 0 12px;color:var(--gold)}
+.article__body blockquote{border-left:2px solid var(--gold);padding-left:26px;margin:36px 0;font-family:var(--serif);font-size:25px;color:var(--sand-200);font-style:italic}
+.article__body a{color:var(--gold);border-bottom:1px solid var(--gold-soft)}
+.article__body ul{margin:0 0 26px 0;padding-left:24px;list-style:none}
+.article__body li{margin-bottom:10px;position:relative;padding-left:18px}
+.article__body li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+.lede{font-family:var(--serif);font-size:24px;font-style:italic;color:var(--sand-200);line-height:1.5}
+.back-link{display:inline-block;margin-bottom:40px;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)}
+.back-link:hover{color:var(--sand-100)}.back-link::before{content:"\2190 ";color:var(--gold)}
+.footer{border-top:1px solid var(--stone-600);padding:56px 0 40px;margin-top:40px}
+.footer__inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+.footer__brand{font-family:var(--serif);font-size:22px;color:var(--sand-100);letter-spacing:0.06em}
+.footer__motto{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:17px}
+.footer__links{display:flex;gap:22px;list-style:none}
+.footer__links a{font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)}
+.footer__links a:hover{color:var(--sand-100)}
+@media (max-width:900px){.nav__links{position:fixed;top:70px;left:0;right:0;bottom:0;height:calc(100vh - 70px);height:calc(100dvh - 70px);z-index:60;overflow-y:auto;flex-direction:column;gap:0;background:var(--stone-900);padding:24px 28px 40px;transform:translateX(100%);transition:transform 0.4s var(--ease)}.nav__links.is-open{transform:none}.nav__links a{padding:20px 0;border-bottom:1px solid var(--stone-700);font-size:16px}.nav__toggle{display:flex}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="index.html"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#crest"/></svg> Lux is the Way</a>
+    <nav>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="art.html">Drawings</a></li>
+        <li><a href="scripts.html" class="is-active">Scripts</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="future.html">Future</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<article class="article">
+  <div class="container">
+    <a class="back-link" href="scripts.html">All scripts</a>
+    <div class="article__meta"><span>June 2026</span><span>&middot;</span><span>Dune</span></div>
+    <h1>Duncan's New Abilities and Dune Mentats</h1>
+    <div class="article__body">
+      <p class="lede">Duncan Idaho, Dune's true main character, has had many incarnations as a ghola grown in Tleilaxu tanks. The final ghola turned out to be the strongest of them all, and a hidden Mentat. Here is how his new powers awaken, and what the way of the Mentat can teach the rest of us.</p>
+
+      <p>I'm going to talk about the ways of the Mentats and Duncan's awakening of his new powers.</p>
+
+      <p>A Mentat, in the terminology of the first book, is:</p>
+
+      <blockquote>"MENTAT: that class of Imperial citizens trained for supreme accomplishments of logic. 'Human Computers.'"<br><span style="font-size:16px;font-style:normal;color:var(--muted);">&mdash; Dune, Terminology of the Imperium</span></blockquote>
+
+      <p>In book five, <em>Heretics of Dune</em>, Duncan's dormant Mentat abilities are awakened by the Great Bashar Miles Teg. In book six, <em>Chapterhouse: Dune</em>, Duncan hides these abilities from his Bene Gesserit captors. As readers we get to experience what it is like to think like a Mentat.</p>
+
+      <h2>Trapped in the No-ship</h2>
+      <p>In book five Duncan is bonded into a dangerous relationship with his Honored Matre partner, Murbella. At the beginning of book six, he says he has to navigate every encounter with Mentat awareness. Every encounter with Murbella requires it. We step into Duncan's mind while he is trapped in the Bene Gesserit No-ship.</p>
+
+      <blockquote>"It was a typical Mentat approach: concentrate on the questions. Mentats accumulated questions the way others accumulated answers. Questions created their own patterns and systems. This produced the most important shapes."</blockquote>
+
+      <p>Duncan is going through the process of understanding what it means to think like a Mentat. The Mentat's weapon is questions.</p>
+
+      <p>Then Frank Herbert changes the tone and sounds like he is speaking to the reader. He continues Duncan's internal dialogue:</p>
+
+      <blockquote>"You looked at your universe through self-created patterns &mdash; all composed of images, words, and labels (everything temporary), all mingled in sensory impulses, that reflected off his internal constructs the way light bounced from bright surfaces."</blockquote>
+
+      <p>What does that mean? Does a Mentat think all names and words are an illusion of this world?</p>
+
+      <h2>The internal screen</h2>
+      <p>Herbert writes a shift, and the reader can sense that Duncan's internal thoughts are turning to a memory of instruction from a Mentat teacher. The teacher in this case is Miles Teg, his awakener. The memory continues:</p>
+
+      <blockquote>"Watch for consistent movements against your internal screen."</blockquote>
+
+      <p>What is this screen? It is internalized as something always in motion: "Idaho could trace the growth of a sensitivity to changes in his own observations, always becoming a Mentat."</p>
+
+      <p>So will he always be in the process of becoming a Mentat? Does a Mentat ever become a realized Mentat?</p>
+
+      <h2>The teachers who asked questions</h2>
+      <p>Most of the great teachers humans have known probed their audiences with questions. The first I think of in this thought process is Socrates. He engaged people's minds and could tell what kind of person someone was by asking them questions. He was known as the pestering gadfly. When we look at Jesus, most of his parables asked the audience questions that flipped their preconceived notions of the world on their heads. He probed with his questions the way the Mentats do.</p>
+
+      <p>The two teachers' intention was usually to help other people understand themselves more, or to understand the limits of their own knowledge. The Mentat's intentions are more for warfare; the same technique is used to win mental battles.</p>
+
+      <p>As humans and thinkers we have a lot to learn from these teachers and mind warriors. When we want to shift someone's thinking, lecturing is the wrong tool. Instead we should be probing with questions, getting the person on the other end of our conversation to arrive at the conclusion themselves. Do you like to be told what to think? Or do you appreciate the process of coming to a new understanding by yourself?</p>
+
+      <p>If you haven't read <em>Chapterhouse: Dune</em>, does this make you want to read it? If you have, did you enjoy reading Duncan become a Mentat? I thought this was one of the coolest explorations of the abilities of the Dune world that Frank Herbert wrote about. I wonder who the people were that influenced his creation of the Mentat archetype.</p>
+
+      <p style="margin-top:40px;"><a href="videos.html" style="color:var(--gold); border-bottom:1px solid var(--gold-soft);">Watch the companion film &rarr;</a></p>
+
+      <h2>Works cited</h2>
+      <p style="font-size:16px; color:var(--muted); line-height:1.9;">
+        Herbert, Frank. <em>Chapterhouse: Dune</em>. Ace Books, 1985, p. 98.<br>
+        Herbert, Frank. <em>Dune</em>. Ace Books, 1965, p. 848.
+      </p>
+
+      <h2>Image credits</h2>
+      <p style="font-size:16px; color:var(--muted); line-height:1.9;">
+        Duncan Idaho &mdash; card art from the <em>Dune: Imperium</em> board game (artist uncredited), based on Denis Villeneuve's <em>Dune</em>. Shared by the Secrets of Dune page.<br>
+        Young Duncan Idaho.<br>
+        Duncan Idaho portrait &mdash; art by denkata5698, DeviantArt.<br>
+        Miles Teg and Murbella, comic-book-style art &mdash; r/dune, Reddit.<br>
+        Thufir Hawat in Mentat mode &mdash; still from <em>Dune</em> (2021), via Dune Navigator.<br>
+        David, Jacques-Louis. <em>The Death of Socrates</em>. 1787, Metropolitan Museum of Art (detail).<br>
+        Tissot, James. <em>Jesus Teaches the People by the Sea</em>. 1886&ndash;1896, Brooklyn Museum.
+      </p>
+
+      <p style="margin-top:50px; color:var(--muted); font-style:italic; font-family:var(--serif); font-size:21px;">- Lucas Edward</p>
+    </div>
+  </div>
+</article>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div><div class="footer__brand">Lux is the Way</div><p class="footer__motto">Stone by stone.</p></div>
+    <ul class="footer__links">
+      <li><a href="art.html">Drawings</a></li><li><a href="scripts.html">Scripts</a></li>
+      <li><a href="videos.html">Videos</a></li><li><a href="future.html">Future</a></li><li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="crest" viewBox="0 0 100 100">
+    <g fill="none" stroke="#c79a4b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M50 22 L50 70"/>
+      <path d="M50 11 L54.5 23 L45.5 23 Z" fill="#c79a4b" stroke="none"/>
+      <path d="M50 34 C34 30 22 34 10 30 C24 40 30 44 30 52 C38 47 44 47 50 50"/>
+      <path d="M50 34 C66 30 78 34 90 30 C76 40 70 44 70 52 C62 47 56 47 50 50"/>
+      <path d="M50 48 C40 50 32 54 24 52 C32 58 38 60 40 66 C44 62 48 62 50 64"/>
+      <path d="M50 48 C60 50 68 54 76 52 C68 58 62 60 60 66 C56 62 52 62 50 64"/>
+      <path d="M50 64 L44 80 M50 64 L50 82 M50 64 L56 80"/>
+    </g>
+  </symbol>
+</svg>
+
+<script>
+(function(){'use strict';var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');if(t&&l){t.addEventListener('click',function(){l.classList.toggle('is-open')});l.addEventListener('click',function(e){if(e.target.tagName==='A')l.classList.remove('is-open')})}})();
+</script>
+</body>
+</html>

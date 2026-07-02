@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Lux is the Way - Drawings, Essays &amp; Videos</title>
-<meta name="description" content="The collected works of Lucas - drawings, essays, and videos." />
+<title>Lux is the Way - Videos, Essays &amp; Drawings</title>
+<meta name="description" content="The collected works of Lucas - videos, essays, and drawings." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
@@ -19,10 +19,9 @@
     <nav>
       <ul class="nav__links" id="navLinks">
         <li><a href="index.html" class="is-active">Home</a></li>
-        <li><a href="art.html">Drawings</a></li>
-        <li><a href="scripts.html">Essays</a></li>
         <li><a href="videos.html">Videos</a></li>
-        <li><a href="future.html">Future</a></li>
+        <li><a href="scripts.html">Essays</a></li>
+        <li><a href="art.html">Drawings</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
@@ -32,15 +31,38 @@
 
 <!-- HERO -->
 <section class="hero">
+  <!-- Layered dune horizon, drifts slower than the page -->
+  <svg class="hero__horizon" viewBox="0 0 1600 320" preserveAspectRatio="xMidYMax slice" aria-hidden="true" data-parallax="0.18" data-parallax-base="translateX(-50%)">
+    <defs>
+      <linearGradient id="duneFar" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#2a231b" stop-opacity="0.0" />
+        <stop offset="1" stop-color="#2a231b" stop-opacity="0.9" />
+      </linearGradient>
+      <linearGradient id="duneNear" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#14110d" stop-opacity="0.2" />
+        <stop offset="1" stop-color="#0f0c08" stop-opacity="1" />
+      </linearGradient>
+    </defs>
+    <!-- twin moons -->
+    <circle cx="1210" cy="74" r="26" fill="#e7dcc4" opacity="0.13" />
+    <circle cx="1268" cy="46" r="12" fill="#e7dcc4" opacity="0.09" />
+    <!-- far dunes with gold rim light -->
+    <path d="M0 210 Q 260 130 520 196 T 1040 176 T 1600 200 V 320 H 0 Z" fill="url(#duneFar)" />
+    <path d="M0 210 Q 260 130 520 196 T 1040 176 T 1600 200" fill="none" stroke="#c79a4b" stroke-opacity="0.28" stroke-width="1.5" />
+    <!-- near dunes -->
+    <path d="M0 268 Q 360 200 720 256 T 1600 250 V 320 H 0 Z" fill="url(#duneNear)" />
+    <path d="M0 268 Q 360 200 720 256 T 1600 250" fill="none" stroke="#c79a4b" stroke-opacity="0.16" stroke-width="1.2" />
+  </svg>
   <div class="container">
     <svg class="hero__crest" viewBox="0 0 100 100" aria-hidden="true"><use href="#crest" /></svg>
-    <p class="eyebrow">Drawings · Essays · Videos</p>
+    <p class="eyebrow eyebrow--center">Videos · Essays · Drawings</p>
     <div class="hero__id">
       <img class="hero__avatar" src="lucas-avatar.jpg" alt="Lucas" />
       <h1>Lux is the Way</h1>
     </div>
+    <p class="hero__sub">The collected works of Lucas — filmed along the way, thought through slowly, and made by hand.</p>
     <div class="btn-row">
-      <a class="btn" href="videos.html">Watch the Videos</a>
+      <a class="btn btn--solid" href="videos.html">Watch the Videos</a>
       <a class="btn btn--ghost" href="scripts.html">Read the Essays</a>
     </div>
     <div class="hero__rule"></div>
@@ -50,17 +72,17 @@
 <!-- THREE WINGS -->
 <section class="section section--alt">
   <div class="container">
-    <div class="section__head reveal">
-      <p class="eyebrow">The Collection</p>
+    <div class="section__head section__head--center reveal">
+      <p class="eyebrow eyebrow--center">The Collection</p>
       <h2>Three wings of one house</h2>
       <p>Each holds a different kind of making. Wander whichever calls to you.</p>
     </div>
     <div class="cards">
-      <a class="card reveal" href="art.html">
+      <a class="card reveal" href="videos.html">
         <span class="card__num">I</span>
-        <h3>Drawings</h3>
-        <p>Pen-and-ink sketches and studies - a gallery of images made by hand and eye.</p>
-        <span class="card__link">View the gallery</span>
+        <h3>Videos</h3>
+        <p>Video work and the channel - moving pictures and the stories behind them.</p>
+        <span class="card__link">Watch the videos</span>
       </a>
       <a class="card reveal" href="scripts.html">
         <span class="card__num">II</span>
@@ -68,25 +90,47 @@
         <p>Long-form writing - thinking out loud about the things worth thinking slowly about.</p>
         <span class="card__link">Read the writing</span>
       </a>
-      <a class="card reveal" href="videos.html">
+      <a class="card reveal" href="art.html">
         <span class="card__num">III</span>
-        <h3>Videos</h3>
-        <p>Video work and the channel - moving pictures and the stories behind them.</p>
-        <span class="card__link">Watch the videos</span>
+        <h3>Drawings</h3>
+        <p>Pen-and-ink sketches and studies - a gallery of images made by hand and eye.</p>
+        <span class="card__link">View the gallery</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- EPIGRAPH INTERLUDE - a moment to admire the view -->
+<!-- LATEST FILM -->
+<section class="section">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <p class="eyebrow eyebrow--center">Latest from the channel</p>
+      <h2>The most recent transmission</h2>
+    </div>
+    <div class="video-grid" style="max-width:820px;margin:0 auto;grid-template-columns:1fr;">
+      <div class="video-card reveal">
+        <div class="video-embed" data-yt="fve26AsOE8k">
+          <a class="video-embed__thumb" href="https://www.youtube.com/watch?v=fve26AsOE8k" target="_blank" rel="noopener" aria-label="Play: The Butlerian Jihad and the AI Revolution">
+            <img src="https://i.ytimg.com/vi/fve26AsOE8k/hqdefault.jpg" alt="The Butlerian Jihad and the AI Revolution" loading="lazy" />
+            <span class="play" aria-hidden="true">&#9654;</span>
+          </a>
+        </div>
+        <div class="video-card__body"><h3>The Butlerian Jihad and the AI Revolution</h3><p>Companion to the essay of the same name.</p></div>
+      </div>
+    </div>
+    <div class="btn-row reveal"><a class="btn btn--ghost" href="videos.html">See all videos</a></div>
+  </div>
+</section>
+
+<!-- EPIGRAPH INTERLUDE -->
 <section class="section section--caladan">
   <div class="container">
-    <p class="eyebrow eyebrow--cool reveal" style="text-align:center;">A moment to admire the view</p>
-    <figure class="epigraph reveal">
+    <div class="ornament reveal" aria-hidden="true"><span></span></div>
+    <figure class="epigraph reveal" style="margin-top:40px;">
       <blockquote>"You accumulate a lot of small observations, sensed but never brought to consciousness. Cumulatively, they say things to you but not in a language anyone speaks. Language isn't necessary."</blockquote>
       <figcaption>- Shoel, <em>Chapterhouse: Dune</em></figcaption>
     </figure>
-    <div class="btn-row reveal"><a class="btn btn--ghost" href="future.html">See what is in the works</a></div>
+    <div class="btn-row reveal"><a class="btn btn--ghost" href="about.html">About the maker</a></div>
   </div>
 </section>
 
@@ -98,10 +142,9 @@
       <p class="footer__motto">Stone by stone.</p>
     </div>
     <ul class="footer__links">
-      <li><a href="art.html">Drawings</a></li>
-      <li><a href="scripts.html">Essays</a></li>
       <li><a href="videos.html">Videos</a></li>
-      <li><a href="future.html">Future</a></li>
+      <li><a href="scripts.html">Essays</a></li>
+      <li><a href="art.html">Drawings</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
   </div>

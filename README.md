@@ -1,6 +1,6 @@
 # Lucas — Portfolio
 
-A clean, static portfolio site for art, essays, and film. Built as plain HTML/CSS/JS — no build step, no dependencies. Hosts on GitHub Pages for free.
+A clean, static portfolio site for art, essays, and film. Built as plain HTML/CSS/JS 
 
 ## Pages
 
